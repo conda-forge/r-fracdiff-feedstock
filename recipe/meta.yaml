@@ -1,4 +1,4 @@
-{% set version = '1.5-0' %}
+{% set version = "1.5-1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/fracdiff_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/fracdiff/fracdiff_{{ version }}.tar.gz
-  sha256: 3a837326a6cdeed5ab1b8a83f57adb2e861886736fbde49fede79b6150081b70
+  sha256: b8103b32a4ca3a59dda1624c07da08ecd144c7a91a747d1f4663e99421950eb6
 
 build:
   merge_build_host: True  # [win]
