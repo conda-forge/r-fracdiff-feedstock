@@ -30,6 +30,7 @@ requirements:
     - {{posix}}zip               # [win]
   host:
     - r-base
+    - libblas
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
