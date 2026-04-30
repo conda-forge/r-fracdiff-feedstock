@@ -1,18 +1,18 @@
-{% set version = "1.5-3" %}
+{% set version = "1.5-4" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
   name: r-fracdiff
-  version: {{ version|replace("-", "_") }}
+  version: "{{ version|replace("-", "_") }}"
 
 source:
   url:
     - {{ cran_mirror }}/src/contrib/fracdiff_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/fracdiff/fracdiff_{{ version }}.tar.gz
-  sha256: 0f90946b4092feff93fad094a2c91bb47c8051595210e86c029c70238dbf7fc0
+  sha256: c38ea9c377144a01e72c32f7fd30d6548f9795c1be909aab143b0efb26b42d9e
 
 build:
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -28,7 +28,6 @@ requirements:
     - {{ stdlib("c") }}          # [not win]
     - {{ compiler('m2w64_c') }}  # [win]
     - {{ stdlib("m2w64_c") }}    # [win]
-    - {{ compiler('fortran') }}  # [osx and arm64]
     - {{ posix }}filesystem      # [win]
     - {{ posix }}make
     - {{ posix }}sed             # [win]
